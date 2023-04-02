@@ -7,39 +7,8 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">  -->
 	<title>ARTIMAS</title>
-    <script type="module">
-    import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
-    
-      neonCursor({
-        el: document.getElementById('app'),
-        shaderPoints: 16,
-        curvePoints: 80,
-        curveLerp: 0.5,
-        radius1: 5,
-        radius2: 30,
-        velocityTreshold: 10,
-        sleepRadiusX: 100,
-        sleepRadiusY: 100,
-        sleepTimeCoefX: 0.0025,
-        sleepTimeCoefY: 0.0025,
-        colorPalette: ['#ff0000', '#0000ff']
-      })</script>
-	<script>
-// window.onscroll = function() {scrollFunction()};
-// let height=screen.height
-// function scrollFunction() {
-//   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-//     document.getElementById("navbar").style.height=height*0.1
-    
-//     // document.getElementById("logo").style.fontSize = "25px";
-//   } else {
-//     document.getElementById("navbar").style.height=height
-    
-//     // document.getElementById("logo").style.fontSize = "35px";
-// }
-// }
+    <meta name="viewport">
 
-    </script>
     <style>
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -47,19 +16,19 @@
     
     height: 100vh;
     background: none;
-    animation: red_art 2s 2s forwards linear;
+    width: 100vw;
+    /* animation: red_art 2s 2s forwards linear; */
     /* position: sticky; */
     top: 0;
     left: 0;
     margin: 10px;
 }
 
-@keyframes red_art {
+/* @keyframes red_art {
     0%   {height:100vh;}
     100%   {height:13vh;
-    /* background-color: #ff00dde9; */
 }
-}
+} */
 
 
 
@@ -74,56 +43,12 @@
 
 }
 
-#app h1 {
-  --fontSize: 60px;
-  --lineHeight: 80px;
-  width: auto;
-  height: calc(2 * var(--lineHeight));
-  line-height: var(--lineHeight);
-  margin: calc(50vh - var(--lineHeight)) auto 0;
-  font-size: var(--fontSize);
-  text-transform: uppercase;
-}
-
-#app a {
-  margin-top: 10px;
-  /* display: inline-block; */
-  text-decoration: none;
-  color: #fff;
-}
 
 a {
   margin-top: 10px;
   /* display: inline-block; */
   text-decoration: none;
   color: #fff;
-}
-
-#app canvas {
-  display: block;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-}
-
-canvas {
-  display: block;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-}
-
-.neon {
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
 }
 
 		body {
@@ -161,7 +86,7 @@ canvas {
 		}
 		.container11
 		{
-			opacity: 0.9;
+			opacity: 0.8;
 			justify-content: center;
 		}
 		.content-article
@@ -357,7 +282,7 @@ div.container-fluid{
 		padding: 20px;
 		margin: 20px;
 		/* min-width: 800px; */
-		width: 80%;
+		/* width: 100%; */
         max-width: 1200px;
 		text-align: center;
 		font-size: 18px;
@@ -375,10 +300,10 @@ div.container-fluid{
     /* min-width: 300px; */
 }
 
-/* canvas{
+canvas{
     height: 100vh;
     width: 100vw;
-} */
+}
 
 @media (max-width:720px){
 .footer{
@@ -416,13 +341,6 @@ margin:0% 3%;
 
 .title{
     font-size: 4em;
-    color: #77adffcb;
-        z-index: -1;
-        text-shadow:
-            0 0 5px #91bbff,
-            0 0 10px #6abffc,
-            0 0 20px #fff;
-    text-align: center;
 }
 
 		/* footer ends */
@@ -534,7 +452,7 @@ button {
       }
 
 
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+      /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
 
 	#footer footer {
 		position: relative;
@@ -823,47 +741,26 @@ button {
 		}
 	}
 
-
-      #myVideo{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: 100vw;
-      }
-
-      .mobile::before{
-        content: "Everything you want is on the other side of fear";
-        position: fixed;
-        opacity: 0.7;
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-size: 5em;
-        color: #fff;
-        z-index: -1;
-        text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #0ff,
-            0 0 80px #0ff,
-            0 0 90px #0ff,
-            0 0 100px #0ff,
-            0 0 150px #0ff;
-      }
+    #myVideo {
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    z-index: -1;
+    /* width: 100vw; */
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0.9;
+}
 	</style>
 </head>
 <body>
-    <div class="pg-canvas mobile" id="">
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="background.mkv" type="video/mp4">
-        </video> -->
-    <div class="container11 ">
-        <div class="logo-container" id="navbar">
+    <div class="pg-canvas" id="app">
+        <div class="container11 ">
+            <div class="logo-container" id="navbar">
+            <video autoplay muted loop id="myVideo">
+                <source src="background.mkv" type="video/mp4">
+            </video>
 		<img class="logo-img" src="Artimas.png" alt="Logo Image">
 		
 	</div>
@@ -976,8 +873,7 @@ button {
 
 	<!-- Footer starts -->
 </div>
-
-<div class="make_sec">    </div>
+</div>
 <footer class="footer">
     <div class="content">
         <div class="top">
