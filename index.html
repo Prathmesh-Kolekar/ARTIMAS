@@ -37,6 +37,8 @@
             }
         }
 
+
+
         a {
             margin-top: 10px;
             /* display: inline-block; */
@@ -59,6 +61,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            animation: flicker 2s 2s forwards linear;
+
             /* height: 150px; */
             /* background-color: black; */
 
@@ -88,9 +92,48 @@
             position: relative;
             max-width: 100%;
             object-fit: contain;
-            animation: dim-glow 6s linear infinite;
+            animation: dim-glow 6s 2s linear infinite,flicker 2.5s linear forwards;
             z-index: 2;
             /* box-shadow: 0 0 50px 20px rgba(0, 0, 255, 0.8); */
+        }
+
+        @keyframes flicker{
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+                /* background-color: #ff00dde9; */
+            }
+            25% {
+                opacity: 1;
+                /* background-color: #ff00dde9; */
+            }
+            30%{
+                opacity: 0;
+            }
+            
+            40% {
+                opacity: 0;
+                /* background-color: #ff00dde9; */
+            }
+            45%{
+                opacity:1;
+            }
+            60%{
+                opacity: 1;
+            }
+            65%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+            
         }
 
         .container11 {
@@ -282,7 +325,8 @@
         div.container-fluid {
             box-shadow: 0px 30px 150px rgb(244, 6, 216);
             border-radius: 30px;
-            background:linear-gradient(45deg,rgb(58, 11, 58),rgb(176, 94, 108));
+            /* background:linear-gradient(45deg,rgb(58, 11, 58),rgb(176, 94, 108));*/
+            background: linear-gradient(45deg,rgb(58 11 58 / 71%),rgb(176 94 108 / 74%));
             border: 7px solid rgb(255, 0, 234);
             padding: 20px;
             margin: 20px;
