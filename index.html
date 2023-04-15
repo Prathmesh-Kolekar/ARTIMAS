@@ -8,6 +8,7 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">  -->
     <title>ARTIMAS</title>
+    <link rel="icon" type="image/x-icon" href="Artimas fav.png">
 
     <style>
         html {
@@ -87,17 +88,22 @@
             }
         }
 
+        .blink {
+            animation: dim-glow 2s linear infinite;
+
+        }
+
         .logo-img {
             max-height: 550px;
             position: relative;
             max-width: 100%;
             object-fit: contain;
-            animation: dim-glow 6s 2s linear infinite,flicker 2.5s linear forwards;
+            animation: dim-glow 6s 2s linear infinite, flicker 2.5s linear forwards;
             z-index: 2;
             /* box-shadow: 0 0 50px 20px rgba(0, 0, 255, 0.8); */
         }
 
-        @keyframes flicker{
+        @keyframes flicker {
             0% {
                 opacity: 0;
             }
@@ -106,34 +112,41 @@
                 opacity: 1;
                 /* background-color: #ff00dde9; */
             }
+
             25% {
                 opacity: 1;
                 /* background-color: #ff00dde9; */
             }
-            30%{
+
+            30% {
                 opacity: 0;
             }
-            
+
             40% {
                 opacity: 0;
                 /* background-color: #ff00dde9; */
             }
-            45%{
-                opacity:1;
-            }
-            60%{
+
+            45% {
                 opacity: 1;
             }
-            65%{
+
+            60% {
+                opacity: 1;
+            }
+
+            65% {
                 opacity: 0;
             }
-            70%{
+
+            70% {
                 opacity: 1;
             }
-            100%{
+
+            100% {
                 opacity: 1;
             }
-            
+
         }
 
         .container11 {
@@ -182,7 +195,7 @@
             position: absolute;
             bottom: -100%;
             left: 0;
-            background: linear-gradient(-45deg, rgba(0, 0, 255, 0.7), rgba(255, 0, 0, 0.7));
+            background: linear-gradient(-347deg, #064ab992, #06013add);
             transition: all 0.5s ease 0s;
         }
 
@@ -326,7 +339,7 @@
             box-shadow: 0px 30px 150px rgb(244, 6, 216);
             border-radius: 30px;
             /* background:linear-gradient(45deg,rgb(58, 11, 58),rgb(176, 94, 108));*/
-            background: linear-gradient(45deg,rgb(58 11 58 / 71%),rgb(176 94 108 / 74%));
+            background: linear-gradient(45deg, rgb(58 11 58 / 71%), rgb(176 94 108 / 74%));
             border: 7px solid rgb(255, 0, 234);
             padding: 20px;
             margin: 20px;
@@ -342,7 +355,9 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
-
+        div.timetable img{
+            width:43em;
+        }
         .content-article {
             text-align: justify;
             margin-left: 20px;
@@ -352,7 +367,7 @@
 
         .make_sec {
             margin: auto;
-            margin-top: 3em;
+            margin-top: 6em;
             margin-bottom: 3em;
             width: 80vw;
             height: 0px;
@@ -361,7 +376,7 @@
                 0px 5px 30px rgb(101, 34, 255, 10);
             border-radius: 5px;
             background-color: #00000055;
-            border: 6px solid rgb(89, 0, 255);
+            border: 6px solid rgb(56, 6, 235);
         }
 
         .col-md-3 {
@@ -396,9 +411,9 @@
 
         .custom-btn {
             color: #fff;
-            width: 130px;
-            height: 40px;
-            padding: 10px 25px;
+            width: 180px;
+            height: 70px;
+            padding: 10px 10px;
             font-family: 'Lato', sans-serif;
             font-weight: 500;
             background: transparent;
@@ -410,7 +425,8 @@
 
         .btn-6 {
             background: #08d7e6;
-            line-height: 40px;
+            border-radius: 15px;
+            line-height: 70px;
             padding: 0;
             border: none;
             box-shadow: 0 0 5px #07f0cd;
@@ -421,7 +437,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            font-size: 1.5em;
+            font-size: 1.7em;
             text-align: center;
             align-items: center;
             font-weight: bold;
@@ -444,8 +460,8 @@
             content: "";
             height: 0%;
             width: 2px;
-            background: #08d7e6;
-            box-shadow: 0 0 5px #07f0cd;
+            background: #08abe6;
+            box-shadow: 0 0 5px #b806be;
         }
 
         .btn-6:before {
@@ -474,7 +490,7 @@
         .btn-6 span:after {
             position: absolute;
             content: "";
-            background: #08d7e6;
+            background: #0891e6;
             box-shadow: 0 0 5px #07f0cd;
         }
 
@@ -816,6 +832,17 @@
             font-size: 1.5em;
         }
 
+        .container_sponsor {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .container_sponsor a img {
+            width: 10em;
+            /* margin: 20px; */
+        }
+
         /* .mobile::before{
         content: "Everything you want is on the other side of fear";
         position: fixed;
@@ -854,14 +881,16 @@
             </div>
             <div class="container-fluid">
                 <div class="mainposter">
-                    <img src="main_poster.jpeg" alt="">
+                    <img src="Main.jpeg" alt="pccoe aimsa">
                 </div>
                 <p class="content-article">Looking for a thrilling challenge that will push your technical expertise,
                     creativity, and critical thinking skills to their limits? Look no further than Artimas - the
                     must-attend technology and innovation event of the year! With six different challenges designed to
                     showcase your talents, you'll have the chance to win exciting prizes and show off your skills in a
                     competitive yet friendly environment. Don't miss out on this opportunity to create, hack, and
-                    innovate - sign up for Artimas today!</p>
+                    innovate - sign up for ARTIMAS hosted by PCCOE AiMSA.</p>
+
+                <!-- <h1 class="blink" style="color: rgb(155, 233, 255);">REGISTRATIONS START FROM 10th April</h1> -->
             </div>
 
 
@@ -871,11 +900,118 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <!-- photogaphy -->
+                    <!-- treasure hunt -->
                     <div class="col-md-3 col-sm-6">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="pixel perfect.jpeg">
+                                <img src="houdini.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>HOUDINI HEIST</h1>
+                                        <p>Unlock your inner Houdini and challenge your mind with the most versatile
+                                            escape room event of the season - Houdini Heist.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1csW-p98aXGV97bIKhd74msORYS7bqO6Y/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1csW-p98aXGV97bIKhd74msORYS7bqO6Y/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hackathon -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Hackmatrix.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>HACK MATRIX</h1>
+                                        <p>Hack Matrix is an exhilarating hackathon event that brings together
+                                            innovative minds from diverse backgrounds to solve complex challenges using
+                                            cutting-edge technology, creativity, and collaboration.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1hFZvjH_9PIPmPR-S_m3fyywtTE0dmo0U/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1hFZvjH_9PIPmPR-S_m3fyywtTE0dmo0U/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Adrenaline.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>ADRENALINE RUSH</h1>
+                                        <p>Get ready to show off your Valorant skills in the "Adrenaline Rush"
+                                            tournament. Make your team and Go head-to-head with your peers and battle it
+                                            out for victory.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScoSF7ddagV4gQ-iF6oE-8gTJeqv-2J_XazZjuYO9L0pno44w/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLScoSF7ddagV4gQ-iF6oE-8gTJeqv-2J_XazZjuYO9L0pno44w/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1bakwK7AKV-5rkoqobvRp8LdKvUb2EgC3/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1bakwK7AKV-5rkoqobvRp8LdKvUb2EgC3/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- poster making -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Cybernetic.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>CYBERNETIC VISIONS</h1>
+                                        <p>Cybernetic Visions is an engaging poster making event that encourages
+                                            participants to showcase their artistic talent and imagination by designing
+                                            posters that depict a futuristic world enhanced by technology</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/12gydGaNKkz9axU8Q6I01dkcjxMkxwDgb/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/12gydGaNKkz9axU8Q6I01dkcjxMkxwDgb/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photography -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="pixelperfect.jpeg">
                                 <div class="over-layer">
 
                                     <div class="frame">
@@ -887,91 +1023,11 @@
                                             onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdFq-WcDYMeUW2yNq15CcNflVSrFn1NXHRu77YKqGfkpADYng/viewform?usp=sf_link', '_blank')"><span><a
                                                     href="https://docs.google.com/forms/d/e/1FAIpQLSdFq-WcDYMeUW2yNq15CcNflVSrFn1NXHRu77YKqGfkpADYng/viewform?usp=sf_link"
                                                     target="_blank">REGISTER</a></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hackathon -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="hack matrix.jpeg">
-                                <div class="over-layer">
-                                    <div class="frame">
-                                        <h1>HACK MATRIX</h1>
-                                        <p>Hack Matrix is an exhilarating hackathon event that brings together
-                                            innovative minds from diverse backgrounds to solve complex challenges using
-                                            cutting-edge technology, creativity, and collaboration.</p>
+                                        <br>
                                         <button class="custom-btn btn-6"
-                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link','_blank')"><span><a
-                                                    href="https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link"
-                                                    target="_blank"></a>REGISTER</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- treasure hunt -->
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="houdini heist.jpeg">
-                                <div class="over-layer">
-                                    <div class="frame">
-                                        <h1>HOUDINI HEIST</h1>
-                                        <p>Unlock your inner Houdini and challenge your mind with the most versatile
-                                            escape room event of the season - Houdini Heist.</p>
-                                        <button class="custom-btn btn-6"
-                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link','_blank')"><span><a
-                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link"
-                                                    target="_blank"></a>REGISTER</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- poster making -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="cybernetic visions.jpeg">
-                                <div class="over-layer">
-                                    <div class="frame">
-                                        <h1>CYBERNETIC VISIONS</h1>
-                                        <p>Cybernetic Visions is an engaging poster making event that encourages
-                                            participants to showcase their artistic talent and imagination by designing
-                                            posters that depict a futuristic world enhanced by technology</p>
-                                        <button class="custom-btn btn-6"
-                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link','_blank')"><span><a
-                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link"
-                                                    target="_blank"></a>REGISTER</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- gaming -->
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="our-team">
-                            <div class="pic">
-                                <img src="valorant.jpeg">
-                                <div class="over-layer">
-                                    <div class="frame">
-                                        <h1>ADRENALINE RUSH</h1>
-                                        <p>Get ready to show off your Valorant skills in the "Adrenaline Rush"
-                                            tournament. Make your team and Go head-to-head with your peers and battle it
-                                            out for victory.</p>
-                                        <button class="custom-btn btn-6"><span><a href=""
-                                                    target="_blank"></a>REGISTER</span></button>
+                                            onclick="window.open('https://drive.google.com/file/d/1ApFzE6hM1JZk4A-hUZ_4i998NGGZfUyF/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1ApFzE6hM1JZk4A-hUZ_4i998NGGZfUyF/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -982,17 +1038,22 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="our-team">
                             <div class="pic">
-                                <img src="neuor drain.jpeg">
+                                <img src="Neurodrain.jpeg">
                                 <div class="over-layer">
                                     <div class="frame">
                                         <h1>NEURO DRAIN</h1>
                                         <p>Gear up for "NeuroDrain" cause it's time for BIG BRAIN.Challenge yourself
-                                            with a mix of multiple-choice and open-ended questions.</p>
+                                            with a mix of multiple-choice as well as open-ended questions.</p>
 
                                         <button class="custom-btn btn-6"
                                             onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxM6e-Vk21o_vX1xSKytGcT9PupkzR4YAmHp0tnhQlX9aWOA/viewform?usp=sf_link','_blank')"><span><a
                                                     href="https://docs.google.com/forms/d/e/1FAIpQLSdxM6e-Vk21o_vX1xSKytGcT9PupkzR4YAmHp0tnhQlX9aWOA/viewform?usp=sf_link"
                                                     target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1Aq5Xrrr-iBS7AMr3MS7opiAVm9Jv5_tw/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1Aq5Xrrr-iBS7AMr3MS7opiAVm9Jv5_tw/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -1002,33 +1063,80 @@
             </div>
             <!-- Footer starts -->
         </div>
+        <div class="make_sec"> </div>
 
+
+        <div class="title" style="padding-bottom: 5vw;">
+            TIME TABLE
+        </div>
+
+        <div class="container-fluid" style="margin-bottom: 7em; flex-direction: column;">
+            <div class="title" style="z-index: 2; font-size: 2.5em;">
+                Day 1-2
+            </div>
+            <div class="timetable">
+                <img src="TT1.jpg" alt="pccoe aimsa">
+            </div>
+           
+           
+
+            <!-- <h1 class="blink" style="color: rgb(155, 233, 255);">REGISTRATIONS START FROM 10th April</h1> -->
+ </div>
+ <div class="container-fluid " style="flex-direction: column;">
+    <div class="title" style="z-index: 2; font-size: 2.5em;">
+        Day 3-4
+    </div>
+    <div class="timetable">
+        <img src="TT2.jpg" alt="pccoe aimsa">
+    </div>
+ </div>
+        <div class="make_sec"> </div>
+        <div class="title" style="padding-bottom: 5vw;">
+            OUR PROUD SPONSORS
+        </div>
+
+        <div class="container_sponsor">
+            <a href="https://goo.gl/maps/jQa3YWUidUoMv1NP9" target="_blank"><img src="sp.png" alt=""></a>
+            <a href="https://goo.gl/maps/5QqbT7KY2CwEhNPXA" target="_blank"><img src="Loca.png" alt=""></a>
+        </div>
+        <div class="container_sponsor">
+            <a href="https://goo.gl/maps/Pv21aW7C1qUt5Skx6" target="_blank"><img src="Intra fitness.png" alt=""
+                    style="width:14em"></a>
+            <a href="https://goo.gl/maps/HqJqka8DYcVJZi68A" target="_blank"><img src="maharashtra Tyre.png" alt=""></a>
+        </div>
+
+     
+        
         <div class="make_sec"> </div>
         <footer class="footer">
             <div class="content">
-                <div class="top">
+                <di class="top">
                     <div class="logo-details">
-                        <a href="http://www.pccoepune.com/"><img src="pccoelogo.webp" width="50px"
-                                height="50px"></img></a>
+                        <a href="http://www.pccoepune.com/"><img src="PCCOE.png" width="150px" height="150px"></img></a>
                         <!-- <span class="logo_name">AiMSA</span> -->
                     </div>
                     <div class="media-icons">
-                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+
                         <a href="https://twitter.com/PCCOEs_AiMSA?t=b9C6FVcVi_5hZUJHYgBySg&s=09"><i
                                 class="fa fa-twitter"></i></a>
                         <a href="https://instagram.com/pccoe_aimsa?igshid=YmMyMTA2M2Y="><i
                                 class="fa fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/pccoe-s-aimsa/"><i class="fa fa-linkedin"></i></a>
-                        <a href="mailto:pccoeaimsa2022@gmail.com"><i class="fa fa-envelope me-3"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100089018106080"><i
+                                class="fa fa-facebook-f"></i></a>
+                        <!-- <a href="mailto:pccoeaimsa2022@gmail.com"><i class="fa fa-envelope me-3"></i></a> -->
                     </div>
                     <div class="logo-details">
-                        <a href="http://www.pccoepune.com/"><img src="AIMSApng.png" width="50px"
-                                height="50px"></img></a>
+                        <img src="AIMSApng.png" width="150px" height="150px"></img>
                         <!-- <span class="logo_name">AiMSA</span> -->
                     </div>
-                </div>
             </div>
-        </footer>
+            <p style="color: #d38dff; text-align: center; font-size: 1.5em;">Designed by Webmasters PCCOE AiMSA</p>
+            <p style="color: #ffffff; text-align: center; font-size: 1em;">Copyright <i class="fa fa-copyright"
+                    aria-hidden="true"></i> 2023 ARTIMAS | PCCOE AiMSA</p>
+
+    </div>
+    </footer>
 </body>
 
 </html>
